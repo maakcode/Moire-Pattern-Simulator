@@ -42,7 +42,7 @@ struct ContentView: View {
                 PatternCanvasView(shape: shape, size: baseSize, spacing: baseSpacing, isFilled: isFilled)
                 PatternCanvasView(shape: shape, size: baseSize, spacing: baseSpacing, isFilled: isFilled)
                     .frame(width: 2000, height: 2000, alignment: .center)
-                    .scaleEffect(.init(width: 0.94, height: 0.94))
+                    .scaleEffect(.init(width: zoomLevel, height: zoomLevel))
                     .rotationEffect(angle + rotation, anchor: .center)
                     .offset(x: offset.width + translation.width - 1000 + geometry.size.width / 2, y: offset.height + translation.height - 1000 + geometry.size.height / 2)
             }
