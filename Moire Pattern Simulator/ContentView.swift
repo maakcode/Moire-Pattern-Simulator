@@ -4,9 +4,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isBottomsheetVisible: Bool = false
-    @State var zoomLevel: CGFloat = 0.5
-    @State var baseSize: CGFloat = 5
-    @State var baseSpacing: CGFloat = 5
+    @State var zoomLevel: CGFloat = 1
+    @State var baseSize: CGFloat = 6
+    @State var baseSpacing: CGFloat = 6
     @State var shape: PatternCanvasView.PatternShape = .circle
     @State var isFilled: Bool = true
 

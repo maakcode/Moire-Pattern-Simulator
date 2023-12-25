@@ -21,13 +21,13 @@ struct SettingView: View {
                 SectionItem("Size") {
                     HStack {
                         Text(baseSize.formatted())
-                        Slider(value: $baseSize, in: 5...30, step: 5)
+                        Slider(value: $baseSize, in: 2...20, step: 2)
                     }
                 }
                 SectionItem("Spacing") {
                     HStack {
                         Text(baseSpacing.formatted())
-                        Slider(value: $baseSpacing, in: 0...30, step: 5)
+                        Slider(value: $baseSpacing, in: 0...20, step: 2)
                     }
                 }
                 SectionItem("Shape") {
