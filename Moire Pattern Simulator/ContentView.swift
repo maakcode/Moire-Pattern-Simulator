@@ -7,6 +7,8 @@ struct ContentView: View {
     @State var baseSize: CGFloat = 5
     @State var baseSpacing: CGFloat = 5
     @State var angle: Angle = .zero
+    @State var shape: PatternCanvasView.PatternShape = .circle
+    @State var isFilled: Bool = true
 
     @GestureState var rotation: Angle = .zero
     @State var offset: CGSize = .zero
@@ -36,8 +38,8 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
-                PatternCanvasView(size: baseSize, spacing: baseSpacing)
-                PatternCanvasView(size: baseSize, spacing: baseSpacing)
+                PatternCanvasView(shape: shape, size: baseSize, spacing: baseSpacing, isFilled: isFilled)
+                PatternCanvasView(shape: shape, size: baseSize, spacing: baseSpacing, isFilled: isFilled)
                     .frame(width: 2000, height: 2000, alignment: .center)
                     .scaleEffect(.init(width: 0.94, height: 0.94))
                     .rotationEffect(angle + rotation, anchor: .center)
