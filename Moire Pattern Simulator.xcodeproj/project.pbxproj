@@ -11,6 +11,7 @@
 		D529EC202B33252600067784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529EC1F2B33252600067784 /* ContentView.swift */; };
 		D529EC222B33252600067784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D529EC212B33252600067784 /* Assets.xcassets */; };
 		D529EC2C2B332AB800067784 /* PatternCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529EC2B2B332AB800067784 /* PatternCanvasView.swift */; };
+		D5FC1F042B39C2E700DF3300 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC1F032B39C2E700DF3300 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D529EC1F2B33252600067784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D529EC212B33252600067784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D529EC2B2B332AB800067784 /* PatternCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCanvasView.swift; sourceTree = "<group>"; };
+		D5FC1F032B39C2E700DF3300 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D529EC1D2B33252600067784 /* MainApp.swift */,
 				D529EC1F2B33252600067784 /* ContentView.swift */,
+				D5FC1F032B39C2E700DF3300 /* SettingView.swift */,
 				D529EC2B2B332AB800067784 /* PatternCanvasView.swift */,
 				D529EC212B33252600067784 /* Assets.xcassets */,
 			);
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D529EC2C2B332AB800067784 /* PatternCanvasView.swift in Sources */,
+				D5FC1F042B39C2E700DF3300 /* SettingView.swift in Sources */,
 				D529EC202B33252600067784 /* ContentView.swift in Sources */,
 				D529EC1E2B33252600067784 /* MainApp.swift in Sources */,
 			);

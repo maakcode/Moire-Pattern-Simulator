@@ -60,8 +60,12 @@ struct PatternCanvasView: View {
 
     // MARK: - Type
 
-    enum PatternShape {
+    enum PatternShape: String, CaseIterable, Identifiable {
         case circle, square, triangle
+        
+        var id: String {
+            self.rawValue
+        }
     }
 }
 
