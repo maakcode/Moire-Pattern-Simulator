@@ -10,29 +10,38 @@ struct SettingView: View {
     @Binding var isFilled: Bool
 
     var body: some View {
-        ScrollView {
-            VStack {
-                SectionItem("Zoom Level") {
-                    HStack {
+        NavigationStack {
+            Form {
+                Section("Zoom Level") {
+                    Slider(value: $zoomLevel, in: 0.5...1.5, step: 0.01) {
+                        EmptyView()
+                    } minimumValueLabel: {
                         Text(zoomLevel.formatted())
-                        Slider(value: $zoomLevel, in: 0.5...1.5, step: 0.01)
+                    } maximumValueLabel: {
+                        Text("")
                     }
                 }
-                SectionItem("Size") {
-                    HStack {
+                Section("Size") {
+                    Slider(value: $baseSize, in: 2...20, step: 2) {
+                        EmptyView()
+                    } minimumValueLabel: {
                         Text(baseSize.formatted())
-                        Slider(value: $baseSize, in: 2...20, step: 2)
+                    } maximumValueLabel: {
+                        Text("")
                     }
                 }
-                SectionItem("Spacing") {
-                    HStack {
+                Section("Spacing") {
+                    Slider(value: $baseSpacing, in: 0...20, step: 2) {
+                        EmptyView()
+                    } minimumValueLabel: {
                         Text(baseSpacing.formatted())
-                        Slider(value: $baseSpacing, in: 0...20, step: 2)
+                    } maximumValueLabel: {
+                        Text("")
                     }
                 }
-                SectionItem("Shape") {
+                Section("Shape") {
                     Picker("Shape", selection: $shape) {
-                        ForEach(PatternCanvasView.PatternShape.allCases) {patternShape in
+                        ForEach(PatternCanvasView.PatternShape.allCases) { patternShape in
                             Text(patternShape.rawValue).tag(patternShape)
                         }
                     }
@@ -40,28 +49,9 @@ struct SettingView: View {
                     Toggle("Fill", isOn: $isFilled)
                 }
             }
-            .padding()
         }
-        .background(Color(.systemGroupedBackground))
-    }
-
-    private func SectionItem(_ title: String, @ViewBuilder contents: () -> some View) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(title)
-                .font(.footnote)
-                .foregroundStyle(.secondary)
-                .padding(.horizontal, 15)
-            VStack {
-                contents()
-            }
-            .padding()
-            .background(in: RoundedRectangle(cornerRadius: 15, style: .continuous), fillStyle: FillStyle())
-        }
-        .padding(.vertical, 10)
     }
 }
-
-
 
 #Preview {
     SettingView(zoomLevel: .constant(1), baseSize: .constant(10), baseSpacing: .constant(10), shape: .constant(.circle), isFilled: .constant(true))
